@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Domowe mini kino — realizacja | archstudiokm</title>
+  <meta name="description" content="Projekt domowego mini kina archstudiokm — nastrojowa strefa rozrywki z dopracowanym oświetleniem.">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="style.css?v=km9">
+
+  <style>
+    @media (max-width: 920px) {
+      .site-header .nav { visibility: hidden; opacity: 0; pointer-events: none; }
+      body.nav-open .site-header .nav { visibility: visible; opacity: 1; pointer-events: auto; }
+    }
+  </style>
+</head>
+<body class="subpage project-page" id="top">
+  <header class="site-header"><a href="index.html" class="brand"><span class="brand-mark"><img src="logo male.png" alt="archstudiokm"></span></a><nav class="nav" id="main-nav"><a href="index.html">Start</a><a href="oferta.html">Oferta</a><a href="wizualizacje.html" aria-current="page">Wizualizacje</a><a href="artykuly.html">Artykuły</a><a href="kontakt.html">Kontakt</a></nav>
+    <button class="menu-toggle" type="button" aria-label="Otwórz menu" aria-controls="main-nav" aria-expanded="false">
+      <span class="menu-label">Menu</span>
+      <span class="menu-close" aria-hidden="true">×</span>
+    </button>
+  </header>
+  <main>
+    <section class="project-hero project-hero-dark"><div class="project-hero-copy reveal"><p class="eyebrow">Wizualizacje / pozostałe</p><h1>Domowe mini kino.</h1><p>Wyrazista, ciemna przestrzeń z miękkimi siedziskami i liniowym oświetleniem, które buduje filmowy klimat bez zbędnych dekoracji.</p><a class="project-back" href="wizualizacje.html">← Wszystkie wizualizacje</a></div><div class="project-hero-image reveal"><img src="mini kino.png" alt="Domowe mini kino"></div></section>
+    <section class="project-gallery project-gallery-two">
+      <button class="project-gallery-item reveal" type="button"><img src="mini kino.png" alt="Domowe kino — widok na ekran" loading="lazy"></button>
+      <button class="project-gallery-item reveal" type="button"><img src="minikikino 2.png" alt="Domowe kino — strefa wypoczynku" loading="lazy"></button>
+    </section>
+    <section class="project-next"><p class="eyebrow">Zobacz więcej</p><a href="projekt-strefa-dzienna.html">Nowa strefa dzienna <span>→</span></a></section>
+  </main>
+  <footer class="footer footer-compact"><div class="footer-brand"><img src="logo.png" alt="archstudiokm"><p>Studio projektowania wnętrz Katarzyny Michoń-Kotas.</p></div><div class="footer-links"><h4>Wizualizacje</h4><a href="wizualizacje.html">Wszystkie projekty</a><a href="kontakt.html">Zapytaj o projekt</a></div><div class="footer-contact"><h4>Kontakt</h4><a href="tel:+48601459198">+48 601 459 198</a><a href="mailto:archstudiokm@gmail.com">archstudiokm@gmail.com</a></div><div class="footer-bottom"><p>© archstudiokm</p></div></footer>
+  <div class="lightbox" id="lightbox"><button id="lightboxClose" aria-label="Zamknij">×</button><img src="" alt="" id="lightboxImage"></div><script src="script.js?v=km9"></script>
+</body>
+</html>

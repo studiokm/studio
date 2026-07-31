@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kontakt — projektant wnętrz Lubliniec | archstudiokm</title>
+  <meta name="description" content="Skontaktuj się z archstudiokm — projektowanie wnętrz w Lublińcu i online. Projekty mieszkań, domów oraz przestrzeni komercyjnych.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css?v=km9">
+
+  <style>
+    @media (max-width: 920px) {
+      .site-header .nav { visibility: hidden; opacity: 0; pointer-events: none; }
+      body.nav-open .site-header .nav { visibility: visible; opacity: 1; pointer-events: auto; }
+    }
+  </style>
+</head>
+<body class="subpage contact-subpage" id="top">
+  <header class="site-header">
+    <a href="index.html#start" class="brand" aria-label="archstudiokm">
+      <span class="brand-mark"><img src="logo male.png" alt="archstudiokm"></span>
+    </a>
+
+    <nav class="nav" id="main-nav" aria-label="Menu główne">
+      <a href="index.html#start">Start</a>
+      <a href="oferta.html">Oferta</a>
+      <a href="wizualizacje.html">Wizualizacje</a>
+      <a href="artykuly.html">Artykuły</a>
+      <a href="kontakt.html" aria-current="page">Kontakt</a>
+    </nav>
+
+    <button class="menu-toggle" type="button" aria-label="Otwórz menu" aria-controls="main-nav" aria-expanded="false">
+      <span class="menu-label">Menu</span>
+      <span class="menu-close" aria-hidden="true">×</span>
+    </button>
+  </header>
+
+  <main>
+    <section class="subhero contact-subhero">
+      <div class="subhero-bg"></div>
+      <div class="subhero-content reveal">
+        <p class="eyebrow">Kontakt</p>
+        <h1>Porozmawiajmy o Twoim wnętrzu.</h1>
+        <p>Opowiedz krótko o planowanej przestrzeni, metrażu i etapie inwestycji. Na tej podstawie dobierzemy właściwy zakres współpracy.</p>
+      </div>
+    </section>
+
+    <section class="contact-content-section">
+      <div class="contact-intro reveal">
+        <div>
+          <p class="eyebrow">Napisz lub zadzwoń</p>
+          <h2>Zacznijmy od kilku informacji o projekcie.</h2>
+        </div>
+        <p>Możesz skorzystać z formularza albo skontaktować się bezpośrednio. Projekty realizowane są w Lublińcu i online.</p>
+      </div>
+
+      <div class="contact-layout">
+        <aside class="contact-details reveal" aria-label="Dane kontaktowe">
+          <a href="tel:+48601459198">
+            <span>Telefon</span>
+            <strong>+48 601 459 198</strong>
+          </a>
+          <a href="mailto:archstudiokm@gmail.com">
+            <span>E-mail</span>
+            <strong>archstudiokm@gmail.com</strong>
+          </a>
+          <a href="https://www.instagram.com/archstudiokm/" target="_blank" rel="noopener">
+            <span>Instagram</span>
+            <strong>@archstudiokm</strong>
+          </a>
+          <a href="https://www.facebook.com/people/Studio-km-architektura-wn%C4%99trz-Katarzyna-Micho%C5%84-Kotas/100082891116999/" target="_blank" rel="noopener">
+            <span>Facebook</span>
+            <strong>Studio KM</strong>
+          </a>
+        </aside>
+
+        <form class="contact-form reveal" id="contactForm">
+          <div class="form-row">
+            <label>
+              <span>Imię i nazwisko *</span>
+              <input type="text" name="name" autocomplete="name" required>
+            </label>
+            <label>
+              <span>Adres e-mail *</span>
+              <input type="email" name="email" autocomplete="email" required>
+            </label>
+          </div>
+
+          <div class="form-row">
+            <label>
+              <span>Telefon</span>
+              <input type="tel" name="phone" autocomplete="tel">
+            </label>
+            <label>
+              <span>Rodzaj projektu</span>
+              <select name="projectType">
+                <option value="Nie określono">Wybierz</option>
+                <option value="Mieszkanie">Mieszkanie</option>
+                <option value="Dom">Dom</option>
+                <option value="Pojedyncze pomieszczenie">Pojedyncze pomieszczenie</option>
+                <option value="Wnętrze komercyjne">Wnętrze komercyjne</option>
+                <option value="Konsultacja">Konsultacja</option>
+              </select>
+            </label>
+          </div>
+
+          <div class="form-row">
+            <label>
+              <span>Przybliżony metraż</span>
+              <input type="text" name="area" inputmode="decimal" placeholder="np. 68 m²">
+            </label>
+            <label>
+              <span>Lokalizacja</span>
+              <input type="text" name="location" placeholder="np. Lubliniec / online">
+            </label>
+          </div>
+
+          <label class="form-message">
+            <span>Wiadomość *</span>
+            <textarea name="message" rows="7" required placeholder="Napisz, na jakim etapie jest inwestycja i czego potrzebujesz."></textarea>
+          </label>
+
+          <label class="form-consent">
+            <input type="checkbox" name="consent" required>
+            <span>Wyrażam zgodę na kontakt w sprawie przesłanego zapytania.</span>
+          </label>
+
+          <div class="form-submit-row">
+            <button class="btn btn-primary" type="submit">Wyślij wiadomość</button>
+            <p class="form-status" id="formStatus" aria-live="polite"></p>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-brand">
+      <img src="logo.png" alt="archstudiokm">
+      <p>archstudiokm — studio projektowania wnętrz Katarzyny Michoń-Kotas.</p>
+      <p class="footer-small">Projektowanie wnętrz, koncepcje, wizualizacje i konsultacje.</p>
+    </div>
+    <div class="footer-links">
+      <h4>Menu</h4>
+      <a href="oferta.html">Oferta</a>
+      <a href="wizualizacje.html">Wizualizacje</a>
+      <a href="artykuly.html">Artykuły</a>
+      <a href="kontakt.html">Kontakt</a>
+    </div>
+    <div class="footer-contact">
+      <h4>Kontakt</h4>
+      <a href="tel:+48601459198">+48 601 459 198</a>
+      <a href="mailto:archstudiokm@gmail.com">archstudiokm@gmail.com</a>
+      <a href="https://www.instagram.com/archstudiokm/" target="_blank" rel="noopener">Instagram archstudiokm</a>
+    </div>
+    <div class="footer-bottom"><p>© archstudiokm. Studio projektowania wnętrz.</p></div>
+  </footer>
+
+  <script src="script.js?v=km9"></script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Pokój dziecięcy — realizacja | archstudiokm</title>
+  <meta name="description" content="Projekt pokoju dziecięcego archstudiokm — przytulna przestrzeń do zabawy, nauki i odpoczynku.">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="style.css?v=km9">
+
+  <style>
+    @media (max-width: 920px) {
+      .site-header .nav { visibility: hidden; opacity: 0; pointer-events: none; }
+      body.nav-open .site-header .nav { visibility: visible; opacity: 1; pointer-events: auto; }
+    }
+  </style>
+</head>
+<body class="subpage project-page" id="top">
+  <header class="site-header"><a href="index.html" class="brand"><span class="brand-mark"><img src="logo male.png" alt="archstudiokm"></span></a><nav class="nav" id="main-nav"><a href="index.html">Start</a><a href="oferta.html">Oferta</a><a href="wizualizacje.html" aria-current="page">Wizualizacje</a><a href="artykuly.html">Artykuły</a><a href="kontakt.html">Kontakt</a></nav>
+    <button class="menu-toggle" type="button" aria-label="Otwórz menu" aria-controls="main-nav" aria-expanded="false">
+      <span class="menu-label">Menu</span>
+      <span class="menu-close" aria-hidden="true">×</span>
+    </button>
+  </header>
+  <main>
+    <section class="project-hero"><div class="project-hero-copy reveal"><p class="eyebrow">Wizualizacje / pokój dziecięcy</p><h1>Przytulnie, funkcjonalnie i z miejscem na wyobraźnię.</h1><p>Spójna przestrzeń dla dziecka z wygodnym miejscem do snu, nauki, przechowywania i codziennej zabawy.</p><a class="project-back" href="wizualizacje.html">← Wszystkie wizualizacje</a></div><div class="project-hero-image reveal"><img src="dziecko 1.png" alt="Pokój dziecięcy"></div></section>
+    <section class="project-gallery project-gallery-three">
+      <button class="project-gallery-item reveal" type="button"><img src="dziecko 1.png" alt="Pokój dziecięcy z biurkiem" loading="lazy"></button>
+      <button class="project-gallery-item reveal" type="button"><img src="dziecko 2.png" alt="Pokój dziecięcy z łóżkiem" loading="lazy"></button>
+      <button class="project-gallery-item reveal" type="button"><img src="dziecko 3.png" alt="Pokój dziecięcy z zabudową" loading="lazy"></button>
+    </section>
+    <section class="project-next"><p class="eyebrow">Następna realizacja</p><a href="projekt-sypialnia.html">Spokojne sypialnie <span>→</span></a></section>
+  </main>
+  <footer class="footer footer-compact"><div class="footer-brand"><img src="logo.png" alt="archstudiokm"><p>Studio projektowania wnętrz Katarzyny Michoń-Kotas.</p></div><div class="footer-links"><h4>Wizualizacje</h4><a href="wizualizacje.html">Wszystkie projekty</a><a href="kontakt.html">Zapytaj o projekt</a></div><div class="footer-contact"><h4>Kontakt</h4><a href="tel:+48601459198">+48 601 459 198</a><a href="mailto:archstudiokm@gmail.com">archstudiokm@gmail.com</a></div><div class="footer-bottom"><p>© archstudiokm</p></div></footer>
+  <div class="lightbox" id="lightbox"><button id="lightboxClose" aria-label="Zamknij">×</button><img src="" alt="" id="lightboxImage"></div><script src="script.js?v=km9"></script>
+</body>
+</html>
