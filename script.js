@@ -97,6 +97,19 @@ document.addEventListener("DOMContentLoaded", () => {
   const mainNav = document.querySelector("#main-nav");
 
   if (menuToggle && mainNav) {
+    if (!mainNav.querySelector(".mobile-social-links")) {
+      const socials = document.createElement("div");
+      socials.className = "mobile-social-links";
+      socials.innerHTML = `
+        <a href="https://www.instagram.com/archstudiokm/" target="_blank" rel="noopener" aria-label="Instagram archstudiokm">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7.8 2h8.4A5.8 5.8 0 0 1 22 7.8v8.4A5.8 5.8 0 0 1 16.2 22H7.8A5.8 5.8 0 0 1 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2Zm0 2A3.8 3.8 0 0 0 4 7.8v8.4A3.8 3.8 0 0 0 7.8 20h8.4a3.8 3.8 0 0 0 3.8-3.8V7.8A3.8 3.8 0 0 0 16.2 4H7.8Zm4.2 3.3A4.7 4.7 0 1 1 7.3 12 4.7 4.7 0 0 1 12 7.3Zm0 2A2.7 2.7 0 1 0 14.7 12 2.7 2.7 0 0 0 12 9.3Zm5.05-2.15a1.1 1.1 0 1 1-1.1 1.1 1.1 1.1 0 0 1 1.1-1.1Z"/></svg>
+        </a>
+        <a href="https://www.facebook.com/people/Studio-km-architektura-wn%C4%99trz-Katarzyna-Micho%C5%84-Kotas/100082891116999/" target="_blank" rel="noopener" aria-label="Facebook Studio KM">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14.2 8.2V6.8c0-.7.5-1.1 1.2-1.1H17V3h-2.3c-2.5 0-4.1 1.5-4.1 4v1.2H8.4V11h2.2v10h3.6V11h2.5l.4-2.8h-2.9Z"/></svg>
+        </a>
+      `;
+      mainNav.appendChild(socials);
+    }
     const setMenuState = (open) => {
       document.body.classList.toggle("nav-open", open);
       menuToggle.setAttribute("aria-expanded", String(open));
@@ -229,36 +242,58 @@ window.addEventListener("pageshow", () => {
 });
 
 
-// KM9 — Formularz kontaktowy dla statycznej strony GitHub Pages.
+// KM10 — Formularz działa na GitHub Pages przez zewnętrzny endpoint FormSubmit.
 document.addEventListener("DOMContentLoaded", () => {
   const form = document.querySelector("#contactForm");
   const status = document.querySelector("#formStatus");
+  const submitButton = form?.querySelector('button[type="submit"]');
 
   if (!form) return;
 
-  form.addEventListener("submit", (event) => {
+  form.addEventListener("submit", async (event) => {
     event.preventDefault();
 
     if (!form.reportValidity()) return;
 
+    const endpoint = form.getAttribute("action");
     const data = new FormData(form);
-    const subject = `Zapytanie ze strony — ${data.get("name") || "nowy projekt"}`;
-    const body = [
-      `Imię i nazwisko: ${data.get("name") || "—"}`,
-      `E-mail: ${data.get("email") || "—"}`,
-      `Telefon: ${data.get("phone") || "—"}`,
-      `Rodzaj projektu: ${data.get("projectType") || "—"}`,
-      `Metraż: ${data.get("area") || "—"}`,
-      `Lokalizacja: ${data.get("location") || "—"}`,
-      "",
-      "Wiadomość:",
-      data.get("message") || "—"
-    ].join("\n");
 
     if (status) {
-      status.textContent = "Otwieramy gotową wiadomość w Twoim programie pocztowym…";
+      status.textContent = "Wysyłamy wiadomość…";
+      status.classList.remove("is-error", "is-success");
     }
 
-    window.location.href = `mailto:archstudiokm@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    if (submitButton) {
+      submitButton.disabled = true;
+      submitButton.textContent = "Wysyłanie…";
+    }
+
+    try {
+      const response = await fetch(endpoint, {
+        method: "POST",
+        body: data,
+        headers: { "Accept": "application/json" }
+      });
+
+      if (!response.ok) {
+        throw new Error("Formularz nie został wysłany.");
+      }
+
+      form.reset();
+      if (status) {
+        status.textContent = "Dziękujemy — wiadomość została wysłana.";
+        status.classList.add("is-success");
+      }
+    } catch (error) {
+      if (status) {
+        status.textContent = "Nie udało się wysłać formularza. Spróbuj ponownie albo napisz na archstudiokm@gmail.com.";
+        status.classList.add("is-error");
+      }
+    } finally {
+      if (submitButton) {
+        submitButton.disabled = false;
+        submitButton.textContent = "Wyślij wiadomość";
+      }
+    }
   });
 });

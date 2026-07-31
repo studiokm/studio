@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=km9">
+  <link rel="stylesheet" href="style.css?v=km10">
 
   <style>
     @media (max-width: 920px) {
@@ -76,11 +76,14 @@
           </a>
         </aside>
 
-        <form class="contact-form reveal" id="contactForm">
+        <form class="contact-form reveal" id="contactForm" action="https://formsubmit.co/ajax/archstudiokm@gmail.com" method="POST">
+          <input type="hidden" name="_subject" value="Nowe zapytanie ze strony archstudiokm">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="_captcha" value="false">
           <div class="form-row">
             <label>
               <span>Imię i nazwisko *</span>
-              <input type="text" name="name" autocomplete="name" required>
+              <input type="text" name="Imię i nazwisko" autocomplete="name" required>
             </label>
             <label>
               <span>Adres e-mail *</span>
@@ -91,11 +94,11 @@
           <div class="form-row">
             <label>
               <span>Telefon</span>
-              <input type="tel" name="phone" autocomplete="tel">
+              <input type="tel" name="Telefon" autocomplete="tel">
             </label>
             <label>
               <span>Rodzaj projektu</span>
-              <select name="projectType">
+              <select name="Rodzaj projektu">
                 <option value="Nie określono">Wybierz</option>
                 <option value="Mieszkanie">Mieszkanie</option>
                 <option value="Dom">Dom</option>
@@ -109,21 +112,21 @@
           <div class="form-row">
             <label>
               <span>Przybliżony metraż</span>
-              <input type="text" name="area" inputmode="decimal" placeholder="np. 68 m²">
+              <input type="text" name="Przybliżony metraż" inputmode="decimal" placeholder="np. 68 m²">
             </label>
             <label>
               <span>Lokalizacja</span>
-              <input type="text" name="location" placeholder="np. Lubliniec / online">
+              <input type="text" name="Lokalizacja" placeholder="np. Lubliniec / online">
             </label>
           </div>
 
           <label class="form-message">
             <span>Wiadomość *</span>
-            <textarea name="message" rows="7" required placeholder="Napisz, na jakim etapie jest inwestycja i czego potrzebujesz."></textarea>
+            <textarea name="Wiadomość" rows="7" required placeholder="Napisz, na jakim etapie jest inwestycja i czego potrzebujesz."></textarea>
           </label>
 
           <label class="form-consent">
-            <input type="checkbox" name="consent" required>
+            <input type="checkbox" name="Zgoda na kontakt" required>
             <span>Wyrażam zgodę na kontakt w sprawie przesłanego zapytania.</span>
           </label>
 
@@ -158,6 +161,6 @@
     <div class="footer-bottom"><p>© archstudiokm. Studio projektowania wnętrz.</p></div>
   </footer>
 
-  <script src="script.js?v=km9"></script>
+  <script src="script.js?v=km10"></script>
 </body>
 </html>
