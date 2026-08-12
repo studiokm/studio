@@ -4,44 +4,110 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>archstudiokm | Projektowanie wnętrz Lubliniec</title>
-  <meta name="description" content="archstudiokm — projektowanie wnętrz w Lublińcu. Projekty mieszkań, domów i wnętrz komercyjnych, od koncepcji po dokumentację.">
+  <title>Projektowanie wnętrz Lubliniec i Częstochowa | archstudiokm</title>
+  <meta name="description" content="archstudiokm — projektowanie wnętrz w Kochanowicach, Lublińcu i Częstochowie. Projekty mieszkań, domów i wnętrz komercyjnych na Śląsku i online.">
   <link rel="canonical" href="https://archstudiokm.pl/">
+  <link rel="preload" as="image" href="hero.png">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="pl_PL">
-  <meta property="og:title" content="archstudiokm | Projektowanie wnętrz Lubliniec">
-  <meta property="og:description" content="Projektowanie wnętrz w Lublińcu — mieszkania, domy i wnętrza komercyjne, od koncepcji po dokumentację.">
+  <meta property="og:title" content="Projektowanie wnętrz Lubliniec i Częstochowa | archstudiokm">
+  <meta property="og:description" content="Projektowanie wnętrz w Kochanowicach, Lublińcu i Częstochowie — od koncepcji po dokumentację i wizualizacje.">
   <meta property="og:url" content="https://archstudiokm.pl/">
   <meta property="og:image" content="https://archstudiokm.pl/hero.png">
   <meta name="twitter:card" content="summary_large_image">
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "archstudiokm",
-    "legalName": "archstudiokm — studio projektowania wnętrz Katarzyny Michoń-Kotas",
-    "url": "https://archstudiokm.pl/",
-    "logo": "https://archstudiokm.pl/logo.png",
-    "image": "https://archstudiokm.pl/hero.png",
-    "email": "archstudiokm@gmail.com",
-    "telephone": "+48 601 459 198",
-    "founder": {
-      "@type": "Person",
-      "name": "Katarzyna Michoń-Kotas"
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "LocalBusiness",
+      "@id": "https://archstudiokm.pl/#studio",
+      "name": "archstudiokm",
+      "legalName": "archstudiokm — studio projektowania wnętrz Katarzyny Michoń-Kotas",
+      "url": "https://archstudiokm.pl/",
+      "logo": "https://archstudiokm.pl/logo.png",
+      "image": "https://archstudiokm.pl/hero.png",
+      "email": "archstudiokm@gmail.com",
+      "telephone": "+48 601 459 198",
+      "founder": {
+        "@type": "Person",
+        "name": "Katarzyna Michoń-Kotas"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Kochanowice",
+        "postalCode": "42-713",
+        "addressRegion": "śląskie",
+        "addressCountry": "PL"
+      },
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Kochanowice"
+        },
+        {
+          "@type": "City",
+          "name": "Lubliniec"
+        },
+        {
+          "@type": "City",
+          "name": "Częstochowa"
+        },
+        {
+          "@type": "City",
+          "name": "Tarnowskie Góry"
+        },
+        {
+          "@type": "City",
+          "name": "Kłobuck"
+        },
+        {
+          "@type": "City",
+          "name": "Myszków"
+        }
+      ],
+      "sameAs": [
+        "https://www.instagram.com/archstudiokm/",
+        "https://www.facebook.com/people/Studio-km-architektura-wn%C4%99trz-Katarzyna-Micho%C5%84-Kotas/100082891116999/"
+      ]
     },
-    "areaServed": ["Lubliniec", "województwo śląskie", "Polska"],
-    "sameAs": [
-      "https://www.instagram.com/archstudiokm/",
-      "https://www.facebook.com/people/Studio-km-architektura-wn%C4%99trz-Katarzyna-Micho%C5%84-Kotas/100082891116999/"
-    ]
-  }
+    {
+      "@type": "WebSite",
+      "@id": "https://archstudiokm.pl/#website",
+      "url": "https://archstudiokm.pl/",
+      "name": "archstudiokm",
+      "inLanguage": "pl-PL",
+      "publisher": {
+        "@id": "https://archstudiokm.pl/#studio"
+      }
+    },
+    {
+      "@type": "Service",
+      "@id": "https://archstudiokm.pl/#projektowanie-wnetrz",
+      "name": "Projektowanie wnętrz",
+      "serviceType": "Projektowanie wnętrz mieszkań, domów i przestrzeni komercyjnych",
+      "provider": {
+        "@id": "https://archstudiokm.pl/#studio"
+      },
+      "areaServed": [
+        "Kochanowice",
+        "Lubliniec",
+        "Częstochowa",
+        "Tarnowskie Góry",
+        "Kłobuck",
+        "Myszków",
+        "województwo śląskie"
+      ]
+    }
+  ]
+}
   </script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="style.css?v=km10">
+  <link rel="stylesheet" href="style.css?v=km11">
 
   <style>
     @media (max-width: 920px) {
@@ -71,6 +137,14 @@
       <a href="oferta.html">Oferta</a>
       <a href="wizualizacje.html">Wizualizacje</a>
       <a href="artykuly.html">Artykuły</a><a href="kontakt.html">Kontakt</a>
+      <div class="mobile-social-links" aria-label="Social media">
+        <a href="https://www.instagram.com/archstudiokm/" target="_blank" rel="noopener" aria-label="Instagram archstudiokm">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7.8 2h8.4A5.8 5.8 0 0 1 22 7.8v8.4A5.8 5.8 0 0 1 16.2 22H7.8A5.8 5.8 0 0 1 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2Zm0 2A3.8 3.8 0 0 0 4 7.8v8.4A3.8 3.8 0 0 0 7.8 20h8.4a3.8 3.8 0 0 0 3.8-3.8V7.8A3.8 3.8 0 0 0 16.2 4H7.8Zm4.2 3.3A4.7 4.7 0 1 1 7.3 12 4.7 4.7 0 0 1 12 7.3Zm0 2A2.7 2.7 0 1 0 14.7 12 2.7 2.7 0 0 0 12 9.3Zm5.05-2.15a1.1 1.1 0 1 1-1.1 1.1 1.1 1.1 0 0 1 1.1-1.1Z"/></svg>
+        </a>
+        <a href="https://www.facebook.com/people/Studio-km-architektura-wn%C4%99trz-Katarzyna-Micho%C5%84-Kotas/100082891116999/" target="_blank" rel="noopener" aria-label="Facebook Studio KM">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14.2 8.2V6.8c0-.7.5-1.1 1.2-1.1H17V3h-2.3c-2.5 0-4.1 1.5-4.1 4v1.2H8.4V11h2.2v10h3.6V11h2.5l.4-2.8h-2.9Z"/></svg>
+        </a>
+      </div>
     </nav>
     <button class="menu-toggle" type="button" aria-label="Otwórz menu" aria-controls="main-nav" aria-expanded="false">
       <span class="menu-label">Menu</span>
@@ -84,11 +158,10 @@
       <div class="hero-overlay"></div>
 
       <div class="hero-content reveal">
-        <p class="eyebrow">archstudiokm / Lubliniec</p>
-        <h1>Wnętrza zaprojektowane ze spokojem.</h1>
+        <p class="eyebrow">archstudiokm / Kochanowice / Lubliniec / Częstochowa</p>
+        <h1>Projektowanie wnętrz w Lublińcu, Częstochowie i okolicy.</h1>
         <p>
-          Studio projektowania wnętrz Katarzyny Michoń-Kotas w Lublińcu. Tworzymy funkcjonalne,
-          eleganckie i dopracowane przestrzenie — od koncepcji po szczegółowy projekt.
+          Studio projektowania wnętrz Katarzyny Michoń-Kotas w Kochanowicach. Realizujemy projekty dla klientów z Lublińca, Częstochowy i okolic — od koncepcji po szczegółową dokumentację.
         </p>
 
         <div class="hero-actions">
@@ -107,8 +180,7 @@
         <p class="eyebrow">O studio</p>
         <h2>Projektujemy wnętrza, które są piękne, wygodne i przemyślane.</h2>
         <p>
-          archstudiokm prowadzi projekty wnętrz w Lublińcu i online — mieszkań, domów, kuchni, salonów, pokoi dziecięcych
-          oraz przestrzeni komercyjnych. Każdy projekt zaczyna się od rozmowy i poznania potrzeb.
+          archstudiokm prowadzi projekty wnętrz w Kochanowicach, Lublińcu, Częstochowie i innych miejscowościach regionu oraz online — mieszkań, domów, kuchni, salonów, pokoi dziecięcych i przestrzeni komercyjnych. Każdy projekt zaczyna się od rozmowy i poznania potrzeb.
         </p>
         <p>
           W pracy łączymy jasne przestrzenie, naturalne materiały, funkcjonalne układy i eleganckie detale.
@@ -276,11 +348,43 @@
       </div>
     </section>
 
+
+    <section class="section local-seo-section" id="obszar-dzialania">
+      <div class="section-head reveal">
+        <p class="eyebrow">Obszar działania</p>
+        <h2>Projektant wnętrz blisko Lublińca i Częstochowy.</h2>
+        <p>Studio działa w Kochanowicach i obsługuje inwestycje w regionie. Najczęściej współpracujemy z klientami z Lublińca, Częstochowy oraz pobliskich miast, a część procesu może odbywać się również online.</p>
+      </div>
+
+      <div class="local-city-grid">
+        <a class="local-city-card reveal" href="projektowanie-wnetrz-lubliniec.html">
+          <span>01</span><h3>Lubliniec</h3><p>Projektowanie mieszkań, domów i pojedynczych pomieszczeń blisko siedziby studia.</p>
+        </a>
+        <a class="local-city-card reveal" href="projektowanie-wnetrz-czestochowa.html">
+          <span>02</span><h3>Częstochowa</h3><p>Kompleksowe projekty wnętrz, koncepcje, wizualizacje i dokumentacja dla inwestycji w mieście i okolicy.</p>
+        </a>
+        <a class="local-city-card reveal" href="projektowanie-wnetrz-slask.html#tarnowskie-gory">
+          <span>03</span><h3>Tarnowskie Góry</h3><p>Wsparcie projektowe dla mieszkań i domów — od układu funkcjonalnego po materiały wykonawcze.</p>
+        </a>
+        <a class="local-city-card reveal" href="projektowanie-wnetrz-slask.html#klobuck">
+          <span>04</span><h3>Kłobuck</h3><p>Projekty dopasowane do metrażu, budżetu i etapu inwestycji, z możliwością pracy hybrydowej.</p>
+        </a>
+        <a class="local-city-card reveal" href="projektowanie-wnetrz-slask.html#myszkow">
+          <span>05</span><h3>Myszków</h3><p>Projektowanie wnętrz mieszkalnych i funkcjonalnych stref dziennych w regionie.</p>
+        </a>
+        <a class="local-city-card reveal" href="projektowanie-wnetrz-slask.html#kochanowice">
+          <span>06</span><h3>Kochanowice i okolice</h3><p>Lokalna współpraca w najbliższym otoczeniu studia — konsultacje i pełne projekty.</p>
+        </a>
+      </div>
+
+      <div class="section-cta reveal"><a href="projektowanie-wnetrz-slask.html" class="btn btn-primary">Zobacz obszar współpracy</a></div>
+    </section>
+
     <section class="section home-articles" id="artykuly">
       <div class="section-head reveal">
         <p class="eyebrow">Artykuły</p>
         <h2>Praktycznie o projektowaniu wnętrz.</h2>
-        <p>Poradniki dla osób planujących remont, budowę lub współpracę z projektantem wnętrz w Lublińcu i online.</p>
+        <p>Poradniki dla osób planujących remont, budowę lub współpracę z projektantem wnętrz w rejonie Lublińca, Częstochowy i online.</p>
       </div>
 
       <div class="article-preview-grid">
@@ -341,8 +445,8 @@
     <div class="footer-brand">
       <img src="logo.png" alt="archstudiokm">
       <p>
-        archstudiokm — studio projektowania wnętrz Katarzyny Michoń-Kotas w Lublińcu.
-        Projekty mieszkań, domów, elewacji i przestrzeni komercyjnych.
+        archstudiokm — studio projektowania wnętrz Katarzyny Michoń-Kotas w Kochanowicach.
+        Projekty mieszkań, domów i przestrzeni komercyjnych w rejonie Lublińca, Częstochowy i online.
       </p>
       <p class="footer-small">Projektowanie wnętrz, koncepcje, wizualizacje i konsultacje.</p>
     </div>
@@ -372,6 +476,6 @@
     <img src="" alt="" id="lightboxImage">
   </div>
 
-  <script src="script.js?v=km10"></script>
+  <script src="script.js?v=km11"></script>
 </body>
 </html>

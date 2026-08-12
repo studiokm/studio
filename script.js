@@ -242,7 +242,7 @@ window.addEventListener("pageshow", () => {
 });
 
 
-// KM10 — Formularz działa na GitHub Pages przez zewnętrzny endpoint FormSubmit.
+// KM11 — Formularz działa na GitHub Pages przez zewnętrzny endpoint FormSubmit.
 document.addEventListener("DOMContentLoaded", () => {
   const form = document.querySelector("#contactForm");
   const status = document.querySelector("#formStatus");
